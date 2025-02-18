@@ -1,0 +1,100 @@
+EcosProxyApp:
+  image:
+    repository: enterprise/ecos-proxy-oidc-ent
+    tag: 2.22.3
+EcosProcessApp:
+  image:
+    repository: core/ecos-process
+    tag: 2.22.0
+EcosModelApp:
+  image:
+    repository: core/ecos-model
+    tag: 2.29.9
+EcosAppsApp:
+  image:
+    repository: core/ecos-apps
+    tag: 2.21.2
+  ecosAppsImages:
+    - repository: core/ecos-order-pass
+      tag: 1.2.1
+    - repository: core/ecos-meetings
+      tag: 1.4.0
+    - repository: core/ecos-service-desk-citeck # Citeck EcosApp. Not a part of core package
+      tag: 1.5.0
+    - repository: core/ecos-assignments  # Citeck EcosApp. Not a part of core package
+      tag: 1.4.0
+    - repository: core/ecos-test-data-app  # Citeck EcosApp. Not a part of core package
+      tag: 1.0.0
+    - repository: core/ecos-offers # Citeck EcosApp. Not a part of core package
+      tag: 1.6.0
+    - repository: core/ecos-time-tracking # Citeck EcosApp. Not a part of core package
+      tag: 1.3.0
+    - repository: core/ecos-aro
+      tag: 1.4.1
+    - repository: core/ecos-correspondence
+      tag: 1.3.1
+    - repository: core/ecos-contracts
+      tag: 1.7.2
+    - repository: core/ecos-contracts-citeck
+      tag: 1.0.0
+    - repository: core/ecos-crm
+      tag: 1.9.0
+    - repository: core/ecos-crm-citeck
+      tag: 1.0.0
+    - repository: core/ecos-vacations
+      tag: 1.3.4
+    # This application breaks data-lists on stands with Alfresco. see https://jira.citeck.ru/browse/ECOSCOM-5316
+    - name: ecos-common-data-list
+      repository: core/ecos-common-data-list
+      tag: 1.10.1
+    - name: ru-working-calendar-app
+      repository: core/ru-working-calendar-app
+      tag: '2025'
+EcosGatewayApp:
+  image:
+    repository: core/ecos-gateway
+    tag: 3.2.1
+EcosUiservApp:
+  image:
+    repository: core/ecos-uiserv
+    tag: 2.27.2
+EcosHistoryApp:
+  image:
+    repository: core/ecos-history
+    tag: 2.21.0
+EcosNotificationsApp:
+  image:
+    repository: core/ecos-notifications
+    tag: 2.21.1
+EcosIntegrationsApp:
+  image:
+    repository: enterprise/ecos-integrations
+    tag: 2.23.2
+EcosTransformationsApp:
+  image:
+    repository: core/ecos-transformations
+    tag: 1.12.0
+EcosContentApp:
+  image:
+    repository: enterprise/ecos-content
+    tag: 1.4.0
+EcosEcomApp:
+  image:
+    repository: core/ecos-ecom
+    tag: 1.10.0
+EcosServiceDeskApp: # Citeck WebApp. Not a part of core package
+  image:
+    repository: core/ecos-service-desk
+    tag: 1.13.8
+EcosEdiApp:
+  image:
+    repository: enterprise/ecos-edi
+    tag: 1.3.0
+EcosPowerAttorneysApp: # Citeck WebApp. Not a part of core package
+  image:
+    repository: core/ecos-power-of-attorneys
+    tag: 1.1.0
+EcosProjectTrackerApp: # Citeck WebApp. Not a part of core package
+  image:
+    repository: core/ecos-project-tracker
+    tag: 1.0.0
