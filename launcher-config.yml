@@ -3,3 +3,37 @@ latestRelease: '1.0.0'
 repositories:
   core: nexus.citeck.ru
   enterprise: enterprise-registry.citeck.ru
+applications:
+  proxy:
+    aliases: [ 'EcosProxyApp' ]
+  eproc:
+    aliases: [ 'EcosProcessApp' ]
+  emodel:
+    aliases: [ 'EcosModelApp' ]
+  eapps:
+    aliases: [ 'EcosAppsApp' ]
+  gateway:
+    aliases: [ 'EcosGatewayApp' ]
+  uiserv:
+    aliases: [ 'EcosUiservApp' ]
+  history:
+    aliases: [ 'EcosHistoryApp' ]
+  notifications:
+    aliases: [ 'EcosNotificationsApp' ]
+  integrations:
+    aliases: [ 'EcosIntegrationsApp' ]
+  transformations:
+    aliases: [ 'EcosTransformationsApp' ]
+  content:
+    aliases: [ 'EcosContentApp' ]
+  ecom:
+    aliases: [ 'EcosEcomApp' ]
+  service-desk:
+    aliases: [ 'EcosServiceDeskApp' ]
+  edi:
+    aliases: [ 'EcosEdiApp' ]
+  attorneys:
+    aliases: [ 'EcosPowerAttorneysApp' ]
+  ecos-project-tracker:
+    aliases: [ 'EcosProjectTrackerApp' ]
+
