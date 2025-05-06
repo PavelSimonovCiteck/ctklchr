@@ -1,8 +1,14 @@
 ---
 latestRelease: '1.0.0'
-repositories:
-  core: nexus.citeck.ru
-  enterprise: enterprise-registry.citeck.ru
+imageRepos:
+  core:
+    url: nexus.citeck.ru
+  enterprise:
+    url: enterprise-registry.citeck.ru
+    authSecret: ent-registry
+secrets:
+  ent-registry:
+    type: basic
 applications:
   proxy:
     aliases: [ 'EcosProxyApp' ]
