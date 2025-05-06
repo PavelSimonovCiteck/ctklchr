@@ -1,45 +1,56 @@
 ---
 latestRelease: '1.0.0'
 imageRepos:
-  core:
+  - id: core
     url: nexus.citeck.ru
-  enterprise:
+  - id: enterprise
     url: enterprise-registry.citeck.ru
-    authSecret: ent-registry
+    pullSecret: ent-registry
 secrets:
-  ent-registry:
+  - id: ent-registry
     type: basic
+kitsRepos:
+  - id: community-kits
+    name: Community Kits
+    url: https://github.com/PavelSimonovCiteck/ctklchr.git
+    branch: community-kits
+    path: kits
+  - id: enterprise-kits
+    name: Enterprise Kits
+    url: https://github.com/PavelSimonovCiteck/ctklchr.git
+    branch: community-kits
+    path: kits
 applications:
-  proxy:
+  - id: proxy
     aliases: [ 'EcosProxyApp' ]
-  eproc:
+  - id: eproc
     aliases: [ 'EcosProcessApp' ]
-  emodel:
+  - id: emodel
     aliases: [ 'EcosModelApp' ]
-  eapps:
+  - id: eapps
     aliases: [ 'EcosAppsApp' ]
-  gateway:
+  - id: gateway
     aliases: [ 'EcosGatewayApp' ]
-  uiserv:
+  - id: uiserv
     aliases: [ 'EcosUiservApp' ]
-  history:
+  - id: history
     aliases: [ 'EcosHistoryApp' ]
-  notifications:
+  - id: notifications
     aliases: [ 'EcosNotificationsApp' ]
-  integrations:
+  - id: integrations
     aliases: [ 'EcosIntegrationsApp' ]
-  transformations:
+  - id: transformations
     aliases: [ 'EcosTransformationsApp' ]
-  content:
+  - id: content
     aliases: [ 'EcosContentApp' ]
-  ecom:
+  - id: ecom
     aliases: [ 'EcosEcomApp' ]
-  service-desk:
+  - id: service-desk
     aliases: [ 'EcosServiceDeskApp' ]
-  edi:
+  - id: edi
     aliases: [ 'EcosEdiApp' ]
-  attorneys:
+  - id: attorneys
     aliases: [ 'EcosPowerAttorneysApp' ]
-  ecos-project-tracker:
+  - id: ecos-project-tracker
     aliases: [ 'EcosProjectTrackerApp' ]
 
