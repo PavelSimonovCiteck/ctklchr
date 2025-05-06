@@ -9,14 +9,14 @@ imageRepos:
 secrets:
   - id: ent-registry
     type: basic
-kitsRepos:
-  - id: community-kits
-    name: Community Kits
+bundleRepos:
+  - id: community
+    name: Community Bundles
     url: https://github.com/PavelSimonovCiteck/ctklchr.git
     branch: community-kits
     path: kits
-  - id: enterprise-kits
-    name: Enterprise Kits
+  - id: enterprise
+    name: Enterprise Bundles
     url: https://github.com/PavelSimonovCiteck/ctklchr.git
     branch: community-kits
     path: kits
