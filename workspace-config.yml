@@ -6,9 +6,6 @@ imageRepos:
   - id: enterprise
     url: enterprise-registry.citeck.ru
     pullSecret: ent-registry
-secrets:
-  - id: ent-registry
-    type: basic
 bundleRepos:
   - id: community
     name: Community Bundles
