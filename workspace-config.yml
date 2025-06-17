@@ -1,5 +1,5 @@
 ---
-latestRelease: '1.0.0'
+latestRelease: 'community:1.0.0'
 imageRepos:
   - id: core
     url: nexus.citeck.ru
