@@ -1,5 +1,5 @@
 ---
-defaultBundleRef: 'community:1.0.0'
+defaultBundleRef: 'community:LATEST'
 imageRepos:
   - id: core
     url: nexus.citeck.ru
