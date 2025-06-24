@@ -1,6 +1,6 @@
 EcosProxyApp:
   image:
-    repository: enterprise/ecos-proxy-oidc-ent
+    repository: core/ecos-proxy-oidc
     tag: 2.22.3
 EcosProcessApp:
   image:
