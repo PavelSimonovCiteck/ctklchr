@@ -81,9 +81,9 @@ webapps:
     aliases: [ 'EcosNotificationsApp' ]
     defaultProps:
       environments:
-          SPRING_MAIL_HOST: "${MAILHOG_HOST}",
-          ECOS_NOTIFICATIONS_EVENT_HOST: "${RMQ_HOST}",
-          ECOS_NOTIFICATIONS_EVENT_USERNAME: "admin",
+          SPRING_MAIL_HOST: "${MAILHOG_HOST}"
+          ECOS_NOTIFICATIONS_EVENT_HOST: "${RMQ_HOST}"
+          ECOS_NOTIFICATIONS_EVENT_USERNAME: "admin"
           ECOS_NOTIFICATIONS_EVENT_PASSWORD: "admin"
       dataSources:
         main:
