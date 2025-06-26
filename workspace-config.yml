@@ -17,27 +17,91 @@ bundleRepos:
     url: https://github.com/PavelSimonovCiteck/ctklchr.git
     branch: enterprise-kits
     path: kits
-applications:
+defaultWebappProps:
+  heapSize: "256m"
+  memoryLimit: "1g"
+webapps:
   - id: proxy
     aliases: [ 'EcosProxyApp' ]
   - id: eproc
     aliases: [ 'EcosProcessApp' ]
+    defaultProps:
+      heapSize: 512m
+      memoryLimit: 1200m
+      dataSources:
+        camunda:
+          url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/citeck_camunda"
+          xa: true
+        eproc:
+          url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/citeck_eproc"
+          xa: true
+        main-mongodb:
+          url: "mongodb://${MONGO_HOST}:${MONGO_PORT}/citeck_eproc"
   - id: emodel
     aliases: [ 'EcosModelApp' ]
+    defaultProps:
+      environments:
+        ECOS_INTEGRATIONS_ONLYOFFICE_HOST: "${ONLY_OFFICE_HOST}"
+      dataSources:
+        main:
+          url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/citeck_emodel"
+        main-xa-aware:
+          url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/citeck_emodel"
+          xa: true
   - id: eapps
     aliases: [ 'EcosAppsApp' ]
+    defaultProps:
+      dataSources:
+        main:
+          url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/citeck_eapps"
+        main-xa-aware:
+          url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/citeck_eapps"
+          xa: true
   - id: gateway
     aliases: [ 'EcosGatewayApp' ]
   - id: uiserv
     aliases: [ 'EcosUiservApp' ]
+    defaultProps:
+      dataSources:
+        main:
+          url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/citeck_uiserv"
+        main-xa-aware:
+          url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/citeck_uiserv"
+          xa: true
   - id: history
     aliases: [ 'EcosHistoryApp' ]
+    defaultProps:
+      dataSources:
+        main:
+          url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/citeck_history"
+        main-xa-aware:
+          url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/citeck_history"
+          xa: true
   - id: notifications
     aliases: [ 'EcosNotificationsApp' ]
+    defaultProps:
+      environments:
+          SPRING_MAIL_HOST: "${MAILHOG_HOST}",
+          ECOS_NOTIFICATIONS_EVENT_HOST: "${RMQ_HOST}",
+          ECOS_NOTIFICATIONS_EVENT_USERNAME: "admin",
+          ECOS_NOTIFICATIONS_EVENT_PASSWORD: "admin"
+      dataSources:
+        main:
+          url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/citeck_history"
   - id: integrations
     aliases: [ 'EcosIntegrationsApp' ]
+    defaultProps:
+      dataSources:
+        main:
+          url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/citeck_integrations"
+        main-xa-aware:
+          url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/citeck_integrations"
+          xa: true
   - id: transformations
     aliases: [ 'EcosTransformationsApp' ]
+    defaultProps:
+      environments:
+        ECOS_INTEGRATIONS_ONLYOFFICE_HOST: "${ONLY_OFFICE_HOST}"
   - id: content
     aliases: [ 'EcosContentApp' ]
   - id: ecom
