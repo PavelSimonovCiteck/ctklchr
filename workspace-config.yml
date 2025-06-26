@@ -5,7 +5,7 @@ imageRepos:
     url: nexus.citeck.ru
   - id: enterprise
     url: enterprise-registry.citeck.ru
-    pullSecret: ent-registry
+    authType: BASIC
 bundleRepos:
   - id: community
     name: Community Bundles
@@ -15,7 +15,7 @@ bundleRepos:
   - id: enterprise
     name: Enterprise Bundles
     url: https://github.com/PavelSimonovCiteck/ctklchr.git
-    branch: community-kits
+    branch: enterprise-kits
     path: kits
 applications:
   - id: proxy
