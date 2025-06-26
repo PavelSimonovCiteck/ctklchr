@@ -1,0 +1,102 @@
+EcosProxyApp:
+  image:
+    repository: enterprise/ecos-proxy-oidc-ent
+    tag: 2.23.10
+EcosProcessApp:
+  image:
+    repository: core/ecos-process
+    tag: 2.23.2
+EcosModelApp:
+  image:
+    repository: core/ecos-model
+    tag: 2.30.10
+EcosAppsApp:
+  image:
+    repository: core/ecos-apps
+    tag: 2.22.3
+  ecosAppsImages:
+    - repository: core/ecos-order-pass
+      tag: 1.3.2
+    - repository: core/ecos-meetings
+      tag: 1.5.0
+    - repository: core/ecos-service-desk-citeck
+      tag: 1.5.1
+    - repository: core/ecos-assignments
+      tag: 2.1.1
+    - repository: core/ecos-test-data-app
+      tag: 1.0.0
+    - repository: core/ecos-offers
+      tag: 1.7.0
+    - repository: core/ecos-time-tracking
+      tag: 1.5.0
+    - repository: core/ecos-aro
+      tag: 1.5.0
+    - repository: core/ecos-correspondence
+      tag: 1.4.1
+    - repository: core/ecos-contracts
+      tag: 1.9.3
+    - repository: core/ecos-contracts-citeck
+      tag: 1.0.0
+    - repository: core/ecos-crm
+      tag: 1.10.1
+    - repository: core/ecos-vacations
+      tag: 1.4.3
+    - repository: core/ecos-releases
+      tag: 1.1.1
+    - name: ecos-common-data-list
+      repository: core/ecos-common-data-list
+      tag: 1.12.3
+    - name: ru-working-calendar-app
+      repository: core/ru-working-calendar-app
+      tag: '2025'
+    - name: corporate-portal
+      repository: core/corporate-portal
+      tag: 1.0.2
+EcosGatewayApp:
+  image:
+    repository: core/ecos-gateway
+    tag: 3.2.1
+EcosUiservApp:
+  image:
+    repository: core/ecos-uiserv
+    tag: 2.28.6
+EcosHistoryApp:
+  image:
+    repository: core/ecos-history
+    tag: 2.22.0
+EcosNotificationsApp:
+  image:
+    repository: core/ecos-notifications
+    tag: 2.22.1
+EcosIntegrationsApp:
+  image:
+    repository: enterprise/ecos-integrations
+    tag: 2.25.2
+EcosTransformationsApp:
+  image:
+    repository: core/ecos-transformations
+    tag: 1.13.0
+EcosContentApp:
+  image:
+    repository: enterprise/ecos-content
+    tag: 1.4.0
+EcosEcomApp:
+  image:
+    repository: core/ecos-ecom
+    tag: 1.11.1
+EcosServiceDeskApp:
+  image:
+    repository: core/ecos-service-desk
+    tag: 1.15.5
+EcosEdiApp:
+  image:
+    repository: enterprise/ecos-edi
+    tag: 1.4.0
+EcosPowerAttorneysApp:
+  image:
+    repository: core/ecos-power-of-attorneys
+    tag: 1.1.1
+EcosProjectTrackerApp:
+  image:
+    repository: core/ecos-project-tracker
+    tag: 2.1.1
