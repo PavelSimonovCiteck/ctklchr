@@ -110,6 +110,13 @@ webapps:
     aliases: [ 'EcosServiceDeskApp' ]
   - id: edi
     aliases: [ 'EcosEdiApp' ]
+    defaultProps:
+      dataSources:
+        main:
+          url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/citeck_edi"
+        main-xa-aware:
+          url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/citeck_edi"
+          xa: true
   - id: attorneys
     aliases: [ 'EcosPowerAttorneysApp' ]
   - id: ecos-project-tracker
